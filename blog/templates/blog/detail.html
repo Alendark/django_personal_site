@@ -1,0 +1,10 @@
+{% extends 'biography/base.html' %}
+
+{% block content %}
+
+    <h1>{{ blog.title }}</h1>
+    <h4>--{{ blog.date|date:"l d.m.Y" }}--</h4>
+    <br>
+    {{ blog.description|safe }}
+
+{% endblock %}

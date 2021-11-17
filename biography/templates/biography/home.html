@@ -1,0 +1,22 @@
+{% extends 'biography/base.html' %}
+
+{% block content %}
+
+    {% load static %}
+
+    <img src="{% static 'biography/TQcVLOz3Xw.jpg' %}" heigth="300" width="500">
+    <br>
+    <br>
+    <br>
+
+    {% for project in projects %}
+
+    <h2>{{ project.title }}</h2>
+    <p>{{ project.description|safe }}</p>
+
+    <img src="{{project.image.url}}" height="380" width="600">
+    <br>
+
+    {% endfor %}
+
+{% endblock %}
